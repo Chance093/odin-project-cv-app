@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import GeneralForm from './components/GeneralForm';
+import GeneralInfo from './components/GeneralInfo';
 
 class App extends Component {
   constructor(){
     super();
+
     this.state = {
       firstName: '',
       lastName: '',
@@ -28,6 +30,13 @@ class App extends Component {
       skills: '',
     }
   }
+
+  // Big function to handle all input changes using linked IDs between state and input tags
+
+  // onInputChange = (e) => {
+  //   this.setState({
+  //   })
+  // }
 
   onFirstNameChange = (e) => {
     this.setState({
@@ -72,6 +81,9 @@ class App extends Component {
   }
 
   render(){
+
+    const {firstName, lastName, position, address, phoneNumber, email, description} = this.state;
+
     return (
       <div className="App">
         <GeneralForm 
@@ -83,8 +95,15 @@ class App extends Component {
           onEmailChange={this.onEmailChange}
           onDescriptionChange={this.onDescriptionChange}
         />
-        <p>{this.state.firstName}</p>
-        <p>{this.state.lastName}</p>
+        <GeneralInfo
+          firstName={firstName}
+          lastName={lastName}
+          position={position}
+          address={address}
+          phoneNumber={phoneNumber}
+          email={email}
+          description={description}
+        />
       </div>
     );
   }
