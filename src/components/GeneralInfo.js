@@ -1,4 +1,5 @@
 function GeneralInfo({firstName, lastName, position, address, phoneNumber, email, description}){
+
     return(
         <div className="general-info">
             <p>{firstName}</p>
@@ -11,5 +12,6 @@ function GeneralInfo({firstName, lastName, position, address, phoneNumber, email
         </div>
     )
 }
+
 
 export default GeneralInfo;
