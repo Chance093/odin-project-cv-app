@@ -1,4 +1,4 @@
-function GeneralInfo({firstName, lastName, position, address, phoneNumber, email, description,
+function Resume({firstName, lastName, position, address, phoneNumber, email, description,
     positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
     schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
     skills}){
@@ -31,4 +31,4 @@ function GeneralInfo({firstName, lastName, position, address, phoneNumber, email
 }
 
 
-export default GeneralInfo;
+export default Resume;

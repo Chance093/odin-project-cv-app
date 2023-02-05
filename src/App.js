@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import GeneralForm from './components/GeneralForm';
-import GeneralInfo from './components/GeneralInfo';
+import Resume from './components/Resume';
 
 class App extends Component {
   constructor(props){
@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
         <GeneralForm onInputChange={this.onInputChange}/>
-        <GeneralInfo
+        <Resume
           firstName={firstName}
           lastName={lastName}
           position={position}
