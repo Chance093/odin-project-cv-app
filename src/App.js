@@ -10,7 +10,8 @@ class App extends Component {
       firstName: '',
       lastName: '',
       position: '',
-      address: '',
+      address1: '',
+      address2: '',
       phoneNumber: '',
       email: '',
       description: '',
@@ -37,7 +38,7 @@ class App extends Component {
 
   render(){
 
-    const {firstName, lastName, position, address, phoneNumber, email, description, 
+    const {firstName, lastName, position, address1, address2, phoneNumber, email, description, 
       positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
       schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
       skills} = this.state;
@@ -49,7 +50,8 @@ class App extends Component {
           firstName={firstName}
           lastName={lastName}
           position={position}
-          address={address}
+          address1={address1}
+          address2={address2}
           phoneNumber={phoneNumber}
           email={email}
           description={description}
