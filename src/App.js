@@ -37,7 +37,10 @@ class App extends Component {
 
   render(){
 
-    const {firstName, lastName, position, address, phoneNumber, email, description} = this.state;
+    const {firstName, lastName, position, address, phoneNumber, email, description, 
+      positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
+      schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
+      skills} = this.state;
 
     return (
       <div className="App">
@@ -50,6 +53,20 @@ class App extends Component {
           phoneNumber={phoneNumber}
           email={email}
           description={description}
+          positionExp={positionExp}
+          companyExp={companyExp}
+          companyLocExp={companyLocExp}
+          fromDateExp={fromDateExp}
+          toDateExp={toDateExp}
+          descriptionExp={descriptionExp}
+          schoolEdu={schoolEdu}
+          locationEdu={locationEdu}
+          degreeEdu={degreeEdu}
+          fieldEdu={fieldEdu}
+          fromDateEdu={fromDateEdu}
+          toDateEdu={toDateEdu}
+          descriptionEdu={descriptionEdu}
+          skills={skills}
         />
       </div>
     );
