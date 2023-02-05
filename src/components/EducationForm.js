@@ -1,6 +1,6 @@
 function EducationForm({onInputChange}){
     return(
-        <div className="personal-form">
+        <div className="education-form">
             <h2>Education</h2>
             <input type='text' placeholder="University Name" name='schoolEdu' onChange={onInputChange}/>
             <input type='text' placeholder="City, State" name='locationEdu' onChange={onInputChange}/>

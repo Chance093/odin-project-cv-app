@@ -1,6 +1,6 @@
 function ExperienceForm({onInputChange}){
     return(
-        <div className="personal-form">
+        <div className="experience-form">
             <h2>Experience</h2>
             <input type='text' placeholder="Position" name='positionExp' onChange={onInputChange}/>
             <input type='text' placeholder="Company" name='companyExp' onChange={onInputChange}/>
