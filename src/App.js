@@ -37,39 +37,10 @@ class App extends Component {
   }
 
   render(){
-
-    const {firstName, lastName, position, address1, address2, phoneNumber, email, objective, 
-      positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
-      schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
-      skills} = this.state;
-
     return (
       <div className="App">
         <GeneralForm onInputChange={this.onInputChange}/>
-        <Resume
-          firstName={firstName}
-          lastName={lastName}
-          position={position}
-          address1={address1}
-          address2={address2}
-          phoneNumber={phoneNumber}
-          email={email}
-          objective={objective}
-          positionExp={positionExp}
-          companyExp={companyExp}
-          companyLocExp={companyLocExp}
-          fromDateExp={fromDateExp}
-          toDateExp={toDateExp}
-          descriptionExp={descriptionExp}
-          schoolEdu={schoolEdu}
-          locationEdu={locationEdu}
-          degreeEdu={degreeEdu}
-          fieldEdu={fieldEdu}
-          fromDateEdu={fromDateEdu}
-          toDateEdu={toDateEdu}
-          descriptionEdu={descriptionEdu}
-          skills={skills}
-        />
+        <Resume state={this.state}/>
       </div>
     );
   }

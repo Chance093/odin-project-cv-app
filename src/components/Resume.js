@@ -4,43 +4,37 @@ import EducationInfo from "./EducationInfo";
 import ExperienceInfo from "./ExperienceInfo";
 import SkillsInfo from "./SkillsInfo";
 
-function Resume({firstName, lastName, position, address1, address2, phoneNumber, email, objective,
-    positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
-    schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
-    skills}){
-
-        // Add all of state as prop and then refer to that prop as prop.specificInfo
-
+function Resume({state}){
     return(
         <div className="resume">
             <PersonalInfo 
-            firstName={firstName}
-            lastName={lastName}
-            position={position}
-            address1={address1}
-            address2={address2}
-            phoneNumber={phoneNumber}
-            email={email}
+            firstName={state.firstName}
+            lastName={state.lastName}
+            position={state.position}
+            address1={state.address1}
+            address2={state.address2}
+            phoneNumber={state.phoneNumber}
+            email={state.email}
             />
-            <ObjectiveInfo objective={objective}/>
+            <ObjectiveInfo objective={state.objective}/>
             <EducationInfo 
-                schoolEdu={schoolEdu}
-                locationEdu={locationEdu}
-                degreeEdu={degreeEdu}
-                fieldEdu={fieldEdu}
-                fromDateEdu={fromDateEdu}
-                toDateEdu={toDateEdu}
-                descriptionEdu={descriptionEdu}
+                schoolEdu={state.schoolEdu}
+                locationEdu={state.locationEdu}
+                degreeEdu={state.degreeEdu}
+                fieldEdu={state.fieldEdu}
+                fromDateEdu={state.fromDateEdu}
+                toDateEdu={state.toDateEdu}
+                descriptionEdu={state.descriptionEdu}
             />
             <ExperienceInfo 
-                positionExp={positionExp}
-                companyExp={companyExp}
-                companyLocExp={companyLocExp}
-                fromDateExp={fromDateExp}
-                toDateExp={toDateExp}
-                descriptionExp={descriptionExp}
+                positionExp={state.positionExp}
+                companyExp={state.companyExp}
+                companyLocExp={state.companyLocExp}
+                fromDateExp={state.fromDateExp}
+                toDateExp={state.toDateExp}
+                descriptionExp={state.descriptionExp}
             />
-            <SkillsInfo skills={skills}/>
+            <SkillsInfo skills={state.skills}/>
         </div>
     )
 }
