@@ -1,6 +1,7 @@
 import PersonalInfo from "./PersonalInfo";
 import ObjectiveInfo from "./ObjectiveInfo";
 import EducationInfo from "./EducationInfo";
+import ExperienceInfo from "./ExperienceInfo";
 
 function Resume({firstName, lastName, position, address1, address2, phoneNumber, email, objective,
     positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
@@ -27,6 +28,14 @@ function Resume({firstName, lastName, position, address1, address2, phoneNumber,
                 fromDateEdu={fromDateEdu}
                 toDateEdu={toDateEdu}
                 descriptionEdu={descriptionEdu}
+            />
+            <ExperienceInfo 
+                positionExp={positionExp}
+                companyExp={companyExp}
+                companyLocExp={companyLocExp}
+                fromDateExp={fromDateExp}
+                toDateExp={toDateExp}
+                descriptionExp={descriptionExp}
             />
             {/*<ExperienceInfo/>
             <SkillsInfo/> */}
