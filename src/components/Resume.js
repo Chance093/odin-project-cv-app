@@ -1,6 +1,7 @@
 import PersonalInfo from "./PersonalInfo";
+import ObjectiveInfo from "./ObjectiveInfo";
 
-function Resume({firstName, lastName, position, address1, address2, phoneNumber, email, description,
+function Resume({firstName, lastName, position, address1, address2, phoneNumber, email, objective,
     positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
     schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
     skills}){
@@ -16,8 +17,8 @@ function Resume({firstName, lastName, position, address1, address2, phoneNumber,
             phoneNumber={phoneNumber}
             email={email}
             />
-            {/* <ObjectiveInfo/>
-            <EducationInfo/>
+            <ObjectiveInfo objective={objective}/>
+            {/*<EducationInfo/>
             <ExperienceInfo/>
             <SkillsInfo/> */}
         </div>

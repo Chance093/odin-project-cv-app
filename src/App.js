@@ -14,7 +14,7 @@ class App extends Component {
       address2: '',
       phoneNumber: '',
       email: '',
-      description: '',
+      objective: '',
       positionExp: '',
       companyExp: '',
       companyLocExp: '',
@@ -38,7 +38,7 @@ class App extends Component {
 
   render(){
 
-    const {firstName, lastName, position, address1, address2, phoneNumber, email, description, 
+    const {firstName, lastName, position, address1, address2, phoneNumber, email, objective, 
       positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
       schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
       skills} = this.state;
@@ -54,7 +54,7 @@ class App extends Component {
           address2={address2}
           phoneNumber={phoneNumber}
           email={email}
-          description={description}
+          objective={objective}
           positionExp={positionExp}
           companyExp={companyExp}
           companyLocExp={companyLocExp}

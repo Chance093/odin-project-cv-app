@@ -9,7 +9,7 @@ function PersonalForm({onInputChange}){
             <input type='text' placeholder="City, State and Zip Code" name='address2' onChange={onInputChange}/>
             <input type='text' placeholder="Phone Number" name='phoneNumber' onChange={onInputChange}/>
             <input type='text' placeholder="Email" name='email' onChange={onInputChange}/>
-            <input type='text' placeholder="Description" name='description' onChange={onInputChange}/>
+            <input type='text' placeholder="Objective Statement" name='objective' onChange={onInputChange}/>
             <input type='text' placeholder="Skills" name='skills' onChange={onInputChange}/>
         </div>
     )
