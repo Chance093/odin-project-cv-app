@@ -18,14 +18,7 @@ function Resume({state}){
             />
             <ObjectiveInfo objective={state.objective}/>
             <EducationInfo education={state.education}/>
-            <ExperienceInfo 
-                positionExp={state.positionExp}
-                companyExp={state.companyExp}
-                companyLocExp={state.companyLocExp}
-                fromDateExp={state.fromDateExp}
-                toDateExp={state.toDateExp}
-                descriptionExp={state.descriptionExp}
-            />
+            <ExperienceInfo experience={state.experience}/>
             <SkillsInfo skills={state.skills}/>
         </div>
     )

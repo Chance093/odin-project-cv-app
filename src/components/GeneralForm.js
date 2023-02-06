@@ -2,12 +2,12 @@ import EducationForm from "./EducationForm";
 import ExperienceForm from "./ExperienceForm";
 import PersonalForm from "./PersonalForm";
 
-function GeneralForm({onInputChange, onEducationInputChange}){
+function GeneralForm({onInputChange, onArrayInputChange}){
     return(
         <div className="general-form">
             <PersonalForm onInputChange={onInputChange}/>
-            <ExperienceForm onInputChange={onInputChange}/>
-            <EducationForm onEducationInputChange={onEducationInputChange}/>
+            <ExperienceForm onArrayInputChange={onArrayInputChange}/>
+            <EducationForm onArrayInputChange={onArrayInputChange}/>
         </div>
     )
 }

@@ -1,5 +1,4 @@
-function ExperienceInfo({positionExp, companyExp, companyLocExp, 
-    fromDateExp, toDateExp, descriptionExp }){
+function ExperienceInfo({ experience }){
 
         // Make it dynamically add more experience cells based on how many jobs person has had
 
@@ -8,9 +7,9 @@ function ExperienceInfo({positionExp, companyExp, companyLocExp,
             <h2>Experience</h2>
             <div className="right-experience">
                 <div className="experience">
-                    <p><span>{companyExp}</span> / {positionExp}</p>
-                    <p>{fromDateExp} - {toDateExp}, {companyLocExp}</p>
-                    <p>{descriptionExp}</p>
+                    <p><span>{experience[0].companyExp}</span> / {experience[0].positionExp}</p>
+                    <p>{experience[0].fromDateExp} - {experience[0].toDateExp}, {experience[0].companyLocExp}</p>
+                    <p>{experience[0].descriptionExp}</p>
                 </div>
             </div>
         </div>

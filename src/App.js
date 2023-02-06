@@ -15,12 +15,14 @@ class App extends Component {
       phoneNumber: '',
       email: '',
       objective: '',
-      positionExp: '',
-      companyExp: '',
-      companyLocExp: '',
-      fromDateExp: '',
-      toDateExp: '',
-      descriptionExp: '',
+      experience: [{
+        positionExp: '',
+        companyExp: '',
+        companyLocExp: '',
+        fromDateExp: '',
+        toDateExp: '',
+        descriptionExp: '',
+      }],
       education: [{
         school: '',
         location: '',
@@ -38,13 +40,15 @@ class App extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
-  onEducationInputChange = (e) => {
+  onArrayInputChange = (e) => {
     const id = e.target.id;
     const name = e.target.name;
-    this.setState({education: [
-      ...this.state.education.slice(0, id),
-      {...this.state.education[id], [name]: e.target.value},
-      ...this.state.education.slice(id + 1)
+    const field = name.includes('Edu') ? 'education' : 'experience';
+    const obj = this.state[field];
+    this.setState({[field]: [
+      ...obj.slice(0, id),
+      {...obj[id], [name]: e.target.value},
+      ...obj.slice(id + 1)
     ]
     })
   }
@@ -52,7 +56,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <GeneralForm onInputChange={this.onInputChange} onEducationInputChange={this.onEducationInputChange}/>
+        <GeneralForm onInputChange={this.onInputChange} onArrayInputChange={this.onArrayInputChange}/>
         <Resume state={this.state}/>
       </div>
     );
