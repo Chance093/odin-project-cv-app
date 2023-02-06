@@ -21,13 +21,15 @@ class App extends Component {
       fromDateExp: '',
       toDateExp: '',
       descriptionExp: '',
-      schoolEdu: '',
-      locationEdu: '',
-      degreeEdu: '',
-      fieldEdu: '',
-      fromDateEdu: '',
-      toDateEdu: '',
-      descriptionEdu: '',
+      education: [{
+        school: '',
+        location: '',
+        degree: '',
+        field: '',
+        startDate: '',
+        endDate: '',
+        description: '',
+      }],
       skills: '',
     }
   }
@@ -36,10 +38,21 @@ class App extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  onEducationInputChange = (e) => {
+    const id = e.target.id;
+    const name = e.target.name;
+    this.setState({education: [
+      ...this.state.education.slice(0, id),
+      {...this.state.education[id], [name]: e.target.value},
+      ...this.state.education.slice(id + 1)
+    ]
+    })
+  }
+
   render(){
     return (
       <div className="App">
-        <GeneralForm onInputChange={this.onInputChange}/>
+        <GeneralForm onInputChange={this.onInputChange} onEducationInputChange={this.onEducationInputChange}/>
         <Resume state={this.state}/>
       </div>
     );
