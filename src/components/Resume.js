@@ -2,11 +2,14 @@ import PersonalInfo from "./PersonalInfo";
 import ObjectiveInfo from "./ObjectiveInfo";
 import EducationInfo from "./EducationInfo";
 import ExperienceInfo from "./ExperienceInfo";
+import SkillsInfo from "./SkillsInfo";
 
 function Resume({firstName, lastName, position, address1, address2, phoneNumber, email, objective,
     positionExp, companyExp, companyLocExp, fromDateExp, toDateExp, descriptionExp, 
     schoolEdu, locationEdu, degreeEdu, fieldEdu, fromDateEdu, toDateEdu, descriptionEdu, 
     skills}){
+
+        // Add all of state as prop and then refer to that prop as prop.specificInfo
 
     return(
         <div className="resume">
@@ -37,8 +40,7 @@ function Resume({firstName, lastName, position, address1, address2, phoneNumber,
                 toDateExp={toDateExp}
                 descriptionExp={descriptionExp}
             />
-            {/*<ExperienceInfo/>
-            <SkillsInfo/> */}
+            <SkillsInfo skills={skills}/>
         </div>
     )
 }
