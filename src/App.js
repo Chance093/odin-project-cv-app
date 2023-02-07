@@ -47,17 +47,12 @@ class App extends Component {
     const id = e.target.id;
     const name = e.target.name;
     const field = name.includes('Edu') ? 'education' : 'experience';
-    const obj = this.state[field];
-    this.setState({[field]: [
-      ...obj.slice(0, id),
-      {...obj[id], [name]: e.target.value},
-      ...obj.slice(id + 1)
-    ]
+    const arr = this.state[field].map(obj => {
+      if(id === obj.id) {
+        return {...obj, [name]: e.target.value};
+      } else return {...obj};
     })
-  }
-
-  test = (e) => {
-    
+    this.setState({[field]: arr})
   }
 
   addForm = (e) => {
@@ -81,6 +76,7 @@ class App extends Component {
       toDateExp: '',
       descriptionExp: '',}
     ]})
+    console.log(this.state);
   }
 
   render(){
