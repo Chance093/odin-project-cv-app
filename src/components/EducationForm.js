@@ -1,4 +1,4 @@
-function EducationForm({onArrayInputChange, addForm, state}){
+function EducationForm({onArrayInputChange, deleteForm, addForm, state}){
 
     const list = (
         <ul className="education">
@@ -11,6 +11,7 @@ function EducationForm({onArrayInputChange, addForm, state}){
                     <input type='text' placeholder="Start Date" name='fromDateEdu' id={list.id} onChange={onArrayInputChange}/>
                     <input type='text' placeholder="End Date" name='toDateEdu' id={list.id} onChange={onArrayInputChange}/>
                     <input type='text' placeholder="Description" name='descriptionEdu' id={list.id} onChange={onArrayInputChange}/>
+                    <button onClick={deleteForm} name='education' id={list.id}>Delete</button>
                 </li>
             )}
         </ul>

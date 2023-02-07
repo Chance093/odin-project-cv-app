@@ -1,4 +1,4 @@
-function ExperienceForm({onArrayInputChange, addForm, state}){
+function ExperienceForm({onArrayInputChange, deleteForm, addForm, state}){
    
     const list = (
         <ul className="experience">
@@ -10,6 +10,7 @@ function ExperienceForm({onArrayInputChange, addForm, state}){
                     <input type='text' placeholder="Start Date" name='fromDateExp' id={list.id} onChange={onArrayInputChange}/>
                     <input type='text' placeholder="End Date" name='toDateExp' id={list.id} onChange={onArrayInputChange}/>
                     <input type='text' placeholder="Description" name='descriptionExp' id={list.id} onChange={onArrayInputChange}/>
+                    <button onClick={deleteForm} name='experience' id={list.id}>Delete</button>
                 </li>
             )}
         </ul>

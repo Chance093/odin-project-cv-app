@@ -76,7 +76,15 @@ class App extends Component {
       toDateExp: '',
       descriptionExp: '',}
     ]})
-    console.log(this.state);
+  }
+
+  deleteForm = (e) => {
+    const id = e.target.id;
+    const field = e.target.name.includes('edu') ? 'education' : 'experience';
+    const arr = this.state[field].filter(obj => {
+      return id !== obj.id
+    })
+    this.setState({[field]: arr})
   }
 
   render(){
@@ -85,7 +93,9 @@ class App extends Component {
         <GeneralForm 
         onInputChange={this.onInputChange} 
         onArrayInputChange={this.onArrayInputChange} 
-        addForm={this.addForm} state={this.state}
+        addForm={this.addForm} 
+        deleteForm={this.deleteForm}
+        state={this.state}
         />
         <Resume state={this.state}/>
       </div>
