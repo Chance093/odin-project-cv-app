@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import GeneralForm from './components/GeneralForm';
 import Resume from './components/Resume';
+import uuid from 'react-uuid';
 
 class App extends Component {
   constructor(props){
@@ -16,6 +17,7 @@ class App extends Component {
       email: '',
       objective: '',
       experience: [{
+        id: uuid(),
         positionExp: '',
         companyExp: '',
         companyLocExp: '',
@@ -24,6 +26,7 @@ class App extends Component {
         descriptionExp: '',
       }],
       education: [{
+        id: uuid(),
         school: '',
         location: '',
         degree: '',
@@ -53,19 +56,25 @@ class App extends Component {
     })
   }
 
+  test = (e) => {
+    
+  }
+
   addForm = (e) => {
     const field = e.target.name.includes('Edu') ? 'education' : 'experience';
     this.setState({[field]: [
       ...this.state[field],
       field === 'education' ? 
-      {school: '',
+      {id: uuid(),
+      school: '',
       location: '',
       degree: '',
       field: '',
       startDate: '',
       endDate: '',
       description: '',} : 
-      {positionExp: '',
+      {id: uuid(),
+      positionExp: '',
       companyExp: '',
       companyLocExp: '',
       fromDateExp: '',

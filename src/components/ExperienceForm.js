@@ -2,14 +2,14 @@ function ExperienceForm({onArrayInputChange, addForm, state}){
    
     const list = (
         <ul className="experience">
-            {state.map((list, i) => 
-                <li>
-                    <input type='text' placeholder="Position" name='positionExp' id={i} onChange={onArrayInputChange}/>
-                    <input type='text' placeholder="Company" name='companyExp' id={i} onChange={onArrayInputChange}/>
-                    <input type='text' placeholder="City, State" name='companyLocExp' id={i} onChange={onArrayInputChange}/>
-                    <input type='text' placeholder="Start Date" name='fromDateExp' id={i} onChange={onArrayInputChange}/>
-                    <input type='text' placeholder="End Date" name='toDateExp' id={i} onChange={onArrayInputChange}/>
-                    <input type='text' placeholder="Description" name='descriptionExp' id={i} onChange={onArrayInputChange}/>
+            {state.map(list => 
+                <li key={list.id}>
+                    <input type='text' placeholder="Position" name='positionExp' id={list.id} onChange={onArrayInputChange}/>
+                    <input type='text' placeholder="Company" name='companyExp' id={list.id} onChange={onArrayInputChange}/>
+                    <input type='text' placeholder="City, State" name='companyLocExp' id={list.id} onChange={onArrayInputChange}/>
+                    <input type='text' placeholder="Start Date" name='fromDateExp' id={list.id} onChange={onArrayInputChange}/>
+                    <input type='text' placeholder="End Date" name='toDateExp' id={list.id} onChange={onArrayInputChange}/>
+                    <input type='text' placeholder="Description" name='descriptionExp' id={list.id} onChange={onArrayInputChange}/>
                 </li>
             )}
         </ul>
