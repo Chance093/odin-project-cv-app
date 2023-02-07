@@ -7,7 +7,7 @@ function GeneralForm({onInputChange, onArrayInputChange, addForm, state}){
         <div className="general-form">
             <PersonalForm onInputChange={onInputChange}/>
             <ExperienceForm onArrayInputChange={onArrayInputChange} addForm={addForm} state={state.experience}/>
-            <EducationForm onArrayInputChange={onArrayInputChange}/>
+            <EducationForm onArrayInputChange={onArrayInputChange} addForm={addForm} state={state.education}/>
         </div>
     )
 }
