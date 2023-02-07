@@ -53,10 +53,31 @@ class App extends Component {
     })
   }
 
+  addForm = (e) => {
+    const field = e.target.name.includes('Edu') ? 'education' : 'experience';
+    this.setState({[field]: [
+      ...this.state[field],
+      field === 'education' ? 
+      {school: '',
+      location: '',
+      degree: '',
+      field: '',
+      startDate: '',
+      endDate: '',
+      description: '',} : 
+      {positionExp: '',
+      companyExp: '',
+      companyLocExp: '',
+      fromDateExp: '',
+      toDateExp: '',
+      descriptionExp: '',}
+    ]})
+  }
+
   render(){
     return (
       <div className="App">
-        <GeneralForm onInputChange={this.onInputChange} onArrayInputChange={this.onArrayInputChange}/>
+        <GeneralForm onInputChange={this.onInputChange} onArrayInputChange={this.onArrayInputChange} addForm={this.addForm} state={this.state}/>
         <Resume state={this.state}/>
       </div>
     );
