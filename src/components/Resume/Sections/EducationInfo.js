@@ -2,7 +2,7 @@ function EducationInfo({ education }) {
 	const list = (
 		<ul className='right-education'>
 			{education.map((list) => (
-				<li key={list.id}>
+				<li key={list.id} className='education'>
 					<p>
 						<span>{list.schoolEdu}</span> / {list.degreeEdu} in {list.fieldEdu}
 					</p>

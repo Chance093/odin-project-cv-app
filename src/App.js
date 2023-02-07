@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GeneralForm from './components/Form/Form';
+import Form from './components/Form/Form';
 import Resume from './components/Resume/Resume';
 import uuid from 'react-uuid';
 
@@ -100,7 +100,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className='App'>
-				<GeneralForm
+				<Form
 					onInputChange={this.onInputChange}
 					onArrayInputChange={this.onArrayInputChange}
 					addForm={this.addForm}
