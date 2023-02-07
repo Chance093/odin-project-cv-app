@@ -1,8 +1,8 @@
-import EducationForm from './EducationForm';
-import ExperienceForm from './ExperienceForm';
-import PersonalForm from './PersonalForm';
+import EducationForm from './Sections/EducationForm';
+import ExperienceForm from './Sections/ExperienceForm';
+import PersonalForm from './Sections/PersonalForm';
 
-function GeneralForm({
+function Form({
 	onInputChange,
 	onArrayInputChange,
 	addForm,
@@ -28,4 +28,4 @@ function GeneralForm({
 	);
 }
 
-export default GeneralForm;
+export default Form;

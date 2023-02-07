@@ -1,8 +1,8 @@
-import PersonalInfo from './PersonalInfo';
-import ObjectiveInfo from './ObjectiveInfo';
-import EducationInfo from './EducationInfo';
-import ExperienceInfo from './ExperienceInfo';
-import SkillsInfo from './SkillsInfo';
+import PersonalInfo from './Sections/PersonalInfo';
+import ObjectiveInfo from './Sections/ObjectiveInfo';
+import EducationInfo from './Sections/EducationInfo';
+import ExperienceInfo from './Sections/ExperienceInfo';
+import SkillsInfo from './Sections/SkillsInfo';
 
 function Resume({ state }) {
 	return (

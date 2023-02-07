@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import GeneralForm from './components/GeneralForm';
-import Resume from './components/Resume';
+import GeneralForm from './components/Form/Form';
+import Resume from './components/Resume/Resume';
 import uuid from 'react-uuid';
 
 class App extends Component {
