@@ -1,6 +1,7 @@
 import EducationForm from './Sections/EducationForm';
 import ExperienceForm from './Sections/ExperienceForm';
 import PersonalForm from './Sections/PersonalForm';
+import Style from './Form.module.css';
 
 function Form({
 	onInputChange,
@@ -10,7 +11,7 @@ function Form({
 	state,
 }) {
 	return (
-		<div className='general-form'>
+		<div className={Style.form}>
 			<PersonalForm onInputChange={onInputChange} />
 			<ExperienceForm
 				onArrayInputChange={onArrayInputChange}
