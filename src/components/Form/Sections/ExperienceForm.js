@@ -1,9 +1,12 @@
+import Style from '../Form.module.css';
+
 function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 	const list = (
-		<ul className='experience'>
+		<ul className={Style.experienceList}>
 			{state.map((list) => (
-				<li key={list.id}>
+				<li key={list.id} className={Style.experience}>
 					<input
+						className={Style.input}
 						type='text'
 						placeholder='Position'
 						name='positionExp'
@@ -11,6 +14,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
+						className={Style.input}
 						type='text'
 						placeholder='Company'
 						name='companyExp'
@@ -18,6 +22,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
+						className={Style.input}
 						type='text'
 						placeholder='City, State'
 						name='companyLocExp'
@@ -25,6 +30,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
+						className={Style.input}
 						type='text'
 						placeholder='Start Date'
 						name='fromDateExp'
@@ -32,6 +38,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
+						className={Style.input}
 						type='text'
 						placeholder='End Date'
 						name='toDateExp'
@@ -39,6 +46,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
+						className={Style.input}
 						type='text'
 						placeholder='Description'
 						name='descriptionExp'
@@ -54,8 +62,8 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 	);
 
 	return (
-		<div className='experience-form'>
-			<h2>Experience</h2>
+		<div className={Style.experienceForm}>
+			<h2 className={Style.head}>Experience</h2>
 			{list}
 			<button onClick={addForm} name='experience'>
 				Add
