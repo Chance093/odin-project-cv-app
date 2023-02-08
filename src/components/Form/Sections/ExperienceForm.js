@@ -63,11 +63,14 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 
 	return (
 		<div className={Style.experienceForm}>
-			<h2 className={Style.head}>Experience</h2>
+			<header className={Style.head}>
+				<h2>Experience</h2>
+				<button onClick={addForm} name='experience' className={Style.addBtn}>
+					Add Job
+				</button>
+			</header>
+
 			{list}
-			<button onClick={addForm} name='experience'>
-				Add
-			</button>
 		</div>
 	);
 }

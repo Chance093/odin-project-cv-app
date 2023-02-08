@@ -71,11 +71,13 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 
 	return (
 		<div className={Style.educationForm}>
-			<h2 className={Style.head}>Education</h2>
+			<header className={Style.head}>
+				<h2>Education</h2>
+				<button onClick={addForm} name='education' className={Style.addBtn}>
+					Add School
+				</button>
+			</header>
 			{list}
-			<button onClick={addForm} name='education'>
-				Add
-			</button>
 		</div>
 	);
 }

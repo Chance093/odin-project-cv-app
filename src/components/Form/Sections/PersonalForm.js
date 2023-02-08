@@ -3,7 +3,9 @@ import Style from '../Form.module.css';
 function PersonalForm({ onInputChange }) {
 	return (
 		<div className={Style.personalForm}>
-			<h2 className={Style.head}>Personal Information</h2>
+			<header className={Style.head}>
+				<h2>Personal Information</h2>
+			</header>
 			<input
 				className={Style.input}
 				type='text'
