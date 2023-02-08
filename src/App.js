@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from './components/Form/Form';
 import Resume from './components/Resume/Resume';
 import uuid from 'react-uuid';
+import Style from './App.module.css';
 
 class App extends Component {
 	constructor(props) {
@@ -99,7 +100,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className='App'>
+			<div className={Style.app}>
 				<Form
 					onInputChange={this.onInputChange}
 					onArrayInputChange={this.onArrayInputChange}
