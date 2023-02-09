@@ -61,7 +61,12 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						id={list.id}
 						onChange={onArrayInputChange}
 					/>
-					<button onClick={deleteForm} name='education' id={list.id}>
+					<button
+						onClick={deleteForm}
+						name='education'
+						id={list.id}
+						className={Style.deleteBtn}
+					>
 						Delete
 					</button>
 				</li>
