@@ -101,6 +101,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className={Style.app}>
+				<h1 className={Style.header}>CV Creator</h1>
 				<Form
 					onInputChange={this.onInputChange}
 					onArrayInputChange={this.onArrayInputChange}
