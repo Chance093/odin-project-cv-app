@@ -3,10 +3,11 @@ import ObjectiveInfo from './Sections/ObjectiveInfo';
 import EducationInfo from './Sections/EducationInfo';
 import ExperienceInfo from './Sections/ExperienceInfo';
 import SkillsInfo from './Sections/SkillsInfo';
+import styles from './Resume.module.css';
 
 function Resume({ state }) {
 	return (
-		<div className='resume'>
+		<div className={styles.resume}>
 			<PersonalInfo
 				firstName={state.firstName}
 				lastName={state.lastName}

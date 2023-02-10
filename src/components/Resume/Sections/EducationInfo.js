@@ -1,6 +1,8 @@
+import styles from '../Resume.module.css';
+
 function EducationInfo({ education }) {
 	const list = (
-		<ul className='right-education'>
+		<ul className={styles.rightEducation}>
 			{education.map((list) => (
 				<li key={list.id} className='education'>
 					<p>
@@ -16,8 +18,8 @@ function EducationInfo({ education }) {
 	);
 
 	return (
-		<div className='education-info'>
-			<h2>Education</h2>
+		<div className={styles.educationInfo}>
+			<h2 className={styles.leftEducation}>Education</h2>
 			{list}
 		</div>
 	);

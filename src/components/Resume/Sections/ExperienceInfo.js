@@ -1,6 +1,8 @@
+import styles from '../Resume.module.css';
+
 function ExperienceInfo({ experience }) {
 	const list = (
-		<ul className='right-experience'>
+		<ul className={styles.rightExperience}>
 			{experience.map((list) => (
 				<li key={list.id} className='experience'>
 					<p>
@@ -16,8 +18,8 @@ function ExperienceInfo({ experience }) {
 	);
 
 	return (
-		<div className='experience-info'>
-			<h2>Experience</h2>
+		<div className={styles.experienceInfo}>
+			<h2 className={styles.leftExperience}>Experience</h2>
 			{list}
 		</div>
 	);

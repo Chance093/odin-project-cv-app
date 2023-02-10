@@ -1,8 +1,10 @@
+import styles from '../Resume.module.css';
+
 function SkillsInfo({ skills }) {
 	return (
-		<div className='skills-info'>
-			<h1>Skills</h1>
-			<p>{skills}</p>
+		<div className={styles.skillsInfo}>
+			<h1 className={styles.leftSkills}>Skills</h1>
+			<p className={styles.rightSkills}>{skills}</p>
 		</div>
 	);
 }

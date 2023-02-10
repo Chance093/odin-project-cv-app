@@ -1,3 +1,5 @@
+import styles from './PersonalInfo.module.css';
+
 function PersonalInfo({
 	firstName,
 	lastName,
@@ -8,10 +10,10 @@ function PersonalInfo({
 	email,
 }) {
 	return (
-		<div className='personal-info'>
-			<h1>{position}</h1>
-			<div className='right-personal'>
-				<h3>
+		<div className={styles.info}>
+			<h1 className={styles.left}>{position}</h1>
+			<div className={styles.right}>
+				<h3 className={styles.name}>
 					{firstName} {lastName}
 				</h3>
 				<p>{address1}</p>
