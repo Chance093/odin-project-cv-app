@@ -1,14 +1,15 @@
-import styles from '../Resume.module.css';
+import styles from './EducationInfo.module.css';
 
 function EducationInfo({ education }) {
 	const list = (
-		<ul className={styles.rightEducation}>
+		<ul className={styles.right}>
 			{education.map((list) => (
-				<li key={list.id} className='education'>
+				<li key={list.id} className={styles.education}>
 					<p>
-						<span>{list.schoolEdu}</span> / {list.degreeEdu} in {list.fieldEdu}
+						<span className={styles.school}>{list.schoolEdu}</span> / {list.degreeEdu}{' '}
+						in {list.fieldEdu}
 					</p>
-					<p>
+					<p className={styles.dates}>
 						{list.fromDateEdu} - {list.toDateEdu}, {list.locationEdu}
 					</p>
 					<p>{list.descriptionEdu}</p>
@@ -18,8 +19,8 @@ function EducationInfo({ education }) {
 	);
 
 	return (
-		<div className={styles.educationInfo}>
-			<h2 className={styles.leftEducation}>Education</h2>
+		<div className={styles.info}>
+			<h2 className={styles.left}>Education</h2>
 			{list}
 		</div>
 	);
