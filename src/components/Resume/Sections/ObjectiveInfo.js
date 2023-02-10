@@ -1,10 +1,10 @@
-import styles from '../Resume.module.css';
+import styles from './ObjectiveInfo.module.css';
 
 function ObjectiveInfo({ objective }) {
 	return (
-		<div className={styles.objectiveInfo}>
-			<h2 className={styles.leftObjective}>Objective Statement</h2>
-			<p className={styles.rightObjective}>{objective}</p>
+		<div className={styles.info}>
+			<h2 className={styles.left}>Objective Statement</h2>
+			<p className={styles.right}>{objective}</p>
 		</div>
 	);
 }
