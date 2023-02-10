@@ -1,12 +1,12 @@
-import Style from '../Form.module.css';
+import styles from '../Form.module.css';
 
 function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 	const list = (
-		<ul className={Style.experienceList}>
+		<ul className={styles.experienceList}>
 			{state.map((list) => (
-				<li key={list.id} className={Style.experience}>
+				<li key={list.id} className={styles.experience}>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Position'
 						name='positionExp'
@@ -14,7 +14,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Company'
 						name='companyExp'
@@ -22,7 +22,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='City, State'
 						name='companyLocExp'
@@ -30,7 +30,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Start Date'
 						name='fromDateExp'
@@ -38,7 +38,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='End Date'
 						name='toDateExp'
@@ -46,7 +46,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Description'
 						name='descriptionExp'
@@ -57,7 +57,7 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onClick={deleteForm}
 						name='experience'
 						id={list.id}
-						className={Style.deleteBtn}
+						className={styles.deleteBtn}
 					>
 						Delete
 					</button>
@@ -67,10 +67,10 @@ function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
 	);
 
 	return (
-		<div className={Style.experienceForm}>
-			<header className={Style.head}>
+		<div className={styles.experienceForm}>
+			<header className={styles.head}>
 				<h2>Experience</h2>
-				<button onClick={addForm} name='experience' className={Style.addBtn}>
+				<button onClick={addForm} name='experience' className={styles.addBtn}>
 					Add Job
 				</button>
 			</header>

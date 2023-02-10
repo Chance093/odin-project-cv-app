@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Form from './components/Form/Form';
 import Resume from './components/Resume/Resume';
 import uuid from 'react-uuid';
-import Style from './App.module.css';
+import styles from './App.module.css';
 
 class App extends Component {
 	constructor(props) {
@@ -100,8 +100,8 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className={Style.app}>
-				<h1 className={Style.header}>CV Creator</h1>
+			<div className={styles.app}>
+				<h1 className={styles.header}>CV Creator</h1>
 				<Form
 					onInputChange={this.onInputChange}
 					onArrayInputChange={this.onArrayInputChange}

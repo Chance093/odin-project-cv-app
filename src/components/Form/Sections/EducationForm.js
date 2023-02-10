@@ -1,12 +1,12 @@
-import Style from '../Form.module.css';
+import styles from '../Form.module.css';
 
 function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 	const list = (
-		<ul className={Style.educationList}>
+		<ul className={styles.educationList}>
 			{state.map((list) => (
-				<li key={list.id} className={Style.education}>
+				<li key={list.id} className={styles.education}>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='University Name'
 						name='schoolEdu'
@@ -14,7 +14,7 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='City, State'
 						name='locationEdu'
@@ -22,7 +22,7 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Degree'
 						name='degreeEdu'
@@ -30,7 +30,7 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Field of Study'
 						name='fieldEdu'
@@ -38,7 +38,7 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Start Date'
 						name='fromDateEdu'
@@ -46,7 +46,7 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='End Date'
 						name='toDateEdu'
@@ -54,7 +54,7 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onChange={onArrayInputChange}
 					/>
 					<input
-						className={Style.input}
+						className={styles.input}
 						type='text'
 						placeholder='Description'
 						name='descriptionEdu'
@@ -65,7 +65,7 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 						onClick={deleteForm}
 						name='education'
 						id={list.id}
-						className={Style.deleteBtn}
+						className={styles.deleteBtn}
 					>
 						Delete
 					</button>
@@ -75,10 +75,10 @@ function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
 	);
 
 	return (
-		<div className={Style.educationForm}>
-			<header className={Style.head}>
+		<div className={styles.educationForm}>
+			<header className={styles.head}>
 				<h2>Education</h2>
-				<button onClick={addForm} name='education' className={Style.addBtn}>
+				<button onClick={addForm} name='education' className={styles.addBtn}>
 					Add School
 				</button>
 			</header>
