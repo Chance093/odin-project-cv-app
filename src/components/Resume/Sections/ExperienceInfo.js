@@ -1,14 +1,15 @@
-import styles from '../Resume.module.css';
+import styles from './ExperienceInfo.module.css';
 
 function ExperienceInfo({ experience }) {
 	const list = (
-		<ul className={styles.rightExperience}>
+		<ul className={styles.right}>
 			{experience.map((list) => (
-				<li key={list.id} className='experience'>
+				<li key={list.id} className={styles.experience}>
 					<p>
-						<span>{list.companyExp}</span> / {list.positionExp}
+						<span className={styles.company}>{list.companyExp}</span> /{' '}
+						{list.positionExp}
 					</p>
-					<p>
+					<p className={styles.dates}>
 						{list.fromDateExp} - {list.toDateExp}, {list.companyLocExp}
 					</p>
 					<p>{list.descriptionExp}</p>
@@ -18,8 +19,8 @@ function ExperienceInfo({ experience }) {
 	);
 
 	return (
-		<div className={styles.experienceInfo}>
-			<h2 className={styles.leftExperience}>Experience</h2>
+		<div className={styles.info}>
+			<h2 className={styles.left}>Experience</h2>
 			{list}
 		</div>
 	);
