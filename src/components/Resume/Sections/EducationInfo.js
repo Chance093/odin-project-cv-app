@@ -2,7 +2,6 @@ import styles from './EducationInfo.module.css';
 
 function EducationInfo({ education }) {
 	function getDegree(list) {
-		console.log(list);
 		if (list.fieldEdu) {
 			return `${list.degreeEdu} in ${list.fieldEdu}`;
 		} else {

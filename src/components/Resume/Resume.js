@@ -5,22 +5,14 @@ import ExperienceInfo from './Sections/ExperienceInfo';
 import SkillsInfo from './Sections/SkillsInfo';
 import styles from './Resume.module.css';
 
-function Resume({ state }) {
+function Resume({ personalInfo, education, experience }) {
 	return (
 		<div className={styles.resume}>
-			<PersonalInfo
-				firstName={state.firstName}
-				lastName={state.lastName}
-				position={state.position}
-				address1={state.address1}
-				address2={state.address2}
-				phoneNumber={state.phoneNumber}
-				email={state.email}
-			/>
-			<ObjectiveInfo objective={state.objective} />
-			<EducationInfo education={state.education} />
-			<ExperienceInfo experience={state.experience} />
-			<SkillsInfo skills={state.skills} />
+			<PersonalInfo personalInfo={personalInfo} />
+			<ObjectiveInfo objective={personalInfo.objective} />
+			<EducationInfo education={education} />
+			<ExperienceInfo experience={experience} />
+			<SkillsInfo skills={personalInfo.skills} />
 		</div>
 	);
 }

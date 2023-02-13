@@ -1,25 +1,17 @@
 import styles from './PersonalInfo.module.css';
 
-function PersonalInfo({
-	firstName,
-	lastName,
-	position,
-	address1,
-	address2,
-	phoneNumber,
-	email,
-}) {
+function PersonalInfo({ personalInfo }) {
 	return (
 		<div className={styles.info}>
-			<h1 className={styles.left}>{position}</h1>
+			<h1 className={styles.left}>{personalInfo.position}</h1>
 			<div className={styles.right}>
 				<h3 className={styles.name}>
-					{firstName} {lastName}
+					{personalInfo.firstName} {personalInfo.lastName}
 				</h3>
-				<p>{address1}</p>
-				<p>{address2}</p>
-				<p>{phoneNumber}</p>
-				<p>{email}</p>
+				<p>{personalInfo.address1}</p>
+				<p>{personalInfo.address2}</p>
+				<p>{personalInfo.phoneNumber}</p>
+				<p>{personalInfo.email}</p>
 			</div>
 		</div>
 	);

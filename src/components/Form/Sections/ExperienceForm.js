@@ -1,9 +1,14 @@
 import styles from '../Form.module.css';
 
-function ExperienceForm({ onArrayInputChange, deleteForm, addForm, state }) {
+function ExperienceForm({
+	onArrayInputChange,
+	deleteForm,
+	addForm,
+	experience,
+}) {
 	const list = (
 		<ul className={styles.experienceList}>
-			{state.map((list) => (
+			{experience.map((list) => (
 				<li key={list.id} className={styles.experience}>
 					<input
 						className={styles.input}
