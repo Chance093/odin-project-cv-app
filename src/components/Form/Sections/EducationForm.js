@@ -1,9 +1,9 @@
 import styles from '../Form.module.css';
 
-function EducationForm({ onArrayInputChange, deleteForm, addForm, state }) {
+function EducationForm({ onArrayInputChange, deleteForm, addForm, education }) {
 	const list = (
 		<ul className={styles.educationList}>
-			{state.map((list) => (
+			{education.map((list) => (
 				<li key={list.id} className={styles.education}>
 					<input
 						className={styles.input}

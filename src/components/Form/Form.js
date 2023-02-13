@@ -8,7 +8,8 @@ function Form({
 	onArrayInputChange,
 	addForm,
 	deleteForm,
-	state,
+	experience,
+	education,
 }) {
 	return (
 		<div className={styles.form}>
@@ -17,13 +18,13 @@ function Form({
 				onArrayInputChange={onArrayInputChange}
 				addForm={addForm}
 				deleteForm={deleteForm}
-				state={state.education}
+				education={education}
 			/>
 			<ExperienceForm
 				onArrayInputChange={onArrayInputChange}
 				addForm={addForm}
 				deleteForm={deleteForm}
-				state={state.experience}
+				experience={experience}
 			/>
 		</div>
 	);
